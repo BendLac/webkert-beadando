@@ -1,0 +1,51 @@
+import { Account } from "../models/account.model";
+
+export const ACCOUNTS: Account[]= [
+    {
+      type: 'PartyAccount',
+      accountType: 'Business',
+      creditLimit: 20000, 
+      description: 'Account used for billing or for settlement purposes concerning a given party (an organization or an individual). It is a specialization of entity Account.',
+      href: 'https://host:port/tmf-api/accountManagement/v4/account/4458',
+      id: '4458',
+      lastModified: '2018-06-14T00:00',
+      name: 'Travel account',
+      paymentStatus: 'In Arrears',    
+      state: 'Suspended',
+    },
+    {
+      type: 'BillingAccount',
+      accountType: 'Business',
+      creditLimit: 10000,
+      description: 'This billing account ...',
+      href: 'https://host:port/tmf-api/accountManagement/v4/account/5430',
+      id: '5430',
+      lastModified: '2018-06-14T00:00',
+      name: 'Home Account',
+      paymentStatus: 'In Arrears',
+      state: 'Inactive',
+    },
+    {
+      type: 'SettlementAccount',
+      accountType: 'Business',
+      creditLimit: 20000,
+      description: 'This settlement account ...',
+      href: 'https://host:port/tmf-api/accountManagement/v4/account/8790',
+      id: '8790',
+      lastModified: '2018-06-14T00:00',
+      name: 'Per Usage Account',
+      paymentStatus: 'In Collection',
+      state: 'Inactive',
+    },
+    {
+      type: 'FinantialAccount',
+      accountType: 'Global',
+      creditLimit: 3500,
+      description: 'This financial account...',
+      href: 'https://host:port/tmf-api/accountManagement/v4/account/1041',
+      id: '1041',
+      lastModified: '2018-06-14T00:00',
+      name: 'Administation account',
+      state: 'Active',
+    }
+  ];

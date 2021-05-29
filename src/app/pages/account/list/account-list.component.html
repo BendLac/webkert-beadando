@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<app-container classes="container-1 flex">
+  <app-account-card class="item" *ngFor="let item of list | async" [account]="item" (getAccount)="onGetAccount($event)"></app-account-card>
+</app-container>
+<br>

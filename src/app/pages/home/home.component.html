@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+<!-- <span [ngSwitch]="page">
+
+    <span *ngSwitchCase="'home'">
+        <app-nav [selectedCategory]="type" [categories]="categories" (callSelectC)="onSelect($event)" (callSelectPage)="page = $event"></app-nav>
+        <span [ngSwitch]="type">
+            <span *ngSwitchCase="'account'" class="container">
+                <app-account-card *ngFor="let item of accounts" [account]="item" appOnHover (getAccount)="goToDetails($event)"></app-account-card>
+            </span>
+
+            <span *ngSwitchCase="'list'" class="container">
+                <app-list-card></app-list-card>
+            </span>
+
+            <span *ngSwitchCase="'contact'" class="container">
+                <app-contact-card *ngFor="let item of contacts | async" [contact]="item" appOnHover></app-contact-card>
+                <button mat-fab class="action-btn" (click)="openDialog()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </span>
+
+            <span *ngSwitchDefault class="container">
+                <app-splash-screen [categories]="categories" (callSelectC)="onSelect($event)"></app-splash-screen>
+            </span>
+        </span>    
+    </span>
+
+    <span *ngSwitchCase="'registration'">
+        <app-registration (callSelectPage)="page = $event"></app-registration>
+    </span>
+
+    <span *ngSwitchCase="'details'">
+        <app-details>
+            szia
+        </app-details>
+    </span>
+
+    <span *ngSwitchDefault>
+        <app-login (callSelectPage)="page = $event"></app-login>
+    </span>
+</span> -->
+
+
+
+

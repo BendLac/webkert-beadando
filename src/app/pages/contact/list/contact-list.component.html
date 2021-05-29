@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>{{title}}</span>
+      <!-- autocomplete -->
+      <div class="searchbar">
+        <input type="text" placeholder="Keresés" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <app-container classes="container-1 flex">
+    <app-contact-card class="item" *ngFor="let item of list | async" [contact]="item"></app-contact-card>
+    <br>
+  </app-container>
+  
+  <button mat-fab class="action-btn" (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+  

@@ -1,0 +1,75 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button [routerLink]="[ '/' ]">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Profil</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+<app-container *ngIf="form" [formGroup]="form">
+
+  <mat-card class="margin-bottom">
+    <mat-card-header>
+      <mat-card-title>Biztonság és magánélet</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>lock</mat-icon>
+          <div mat-line> Név </div>
+          <div mat-line> {{form.value.identify[1].href}} </div>  
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</app-container>
+
+
+
+
+<mat-card class="margin-bottom">
+    <mat-card-header>
+      <mat-card-title>Általános információk</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="max-width margin-bottom" cellspacing="0" formArrayAccount="account">
+        <tr>
+          <td formGroupAccount="0">
+            <mat-form-field class="max-width">
+              <mat-label>Név</mat-label>
+              <input type="text" account="account" formControlAccount="name" matInput>
+            </mat-form-field>
+          </td>
+          <td formGroupAccount="1">
+            <mat-form-field class="max-width">
+              <mat-label>Megye</mat-label>
+              <input type="text" account="account" formControlAccount="name" matInput autocomplete="new-password">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+
+      <table class="max-width margin-bottom" cellspacing="0">
+        <tr style="display: flex; align-items: center;">
+          <td style="flex: 1;">
+            <mat-form-field appearance="fill" class="max-width">
+              <mat-label>Utoljára Módosítva</mat-label>
+              <input matInput [matDatepicker]="picker" formControlAccount="lastModified" autocomplete="new-password">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> <!-- ide kell kiegészítés ha kellene -->
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </td>
+          <td style="flex: 1; padding-left: 8px;">
+            <mat-radio-group formControlAccount="accountType" class="max-width">
+              <mat-radio-button value="Party">Party</mat-radio-button>
+              <mat-radio-button value="Billing">Billing</mat-radio-button>
+              <mat-radio-button value="Settlement">Settlement</mat-radio-button>
+            </mat-radio-group>
+          </td>
+        </tr>
+    </table>
+    </mat-card-content>
+<button mat-button (click)="log()">log</button>
+</mat-card>
