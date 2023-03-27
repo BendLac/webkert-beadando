@@ -1,6 +1,9 @@
 # Webkert
 
-### Webfejlesztési keretrendszerek kurzusra készült az SZTE kurzusán
+### Webfejlesztési keretrendszerek kurzusra készült. 
+
+#### SZTE 2021 tavasz
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
